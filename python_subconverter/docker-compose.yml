@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  subconverter:
+    build: .
+    ports:
+      - "25500:8000"
+    volumes:
+      - ./pref.ini:/usr/src/app/pref.ini
+      - ./base:/usr/src/app/base
+    restart: always
